@@ -3,68 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeVerse | Lenguajes de Programación</title>
+    <title>CodeWorld - Lenguajes de Programación</title>
     <link rel="stylesheet" href="styles.css">
+   
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <nav>
-            <div class="logo">CodeVerse</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#lenguajes">Lenguajes</a></li>
-                <li><a href="#estadisticas">Estadísticas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">CodeWorld</a>
+                <ul class="nav-links">
+                    <li><a href="#languages">Lenguajes</a></li>
+                    <li><a href="#examples">Ejemplos</a></li>
+                    <li><a href="#resources">Recursos</a></li>
+                    <li><a href="#" class="btn">Comenzar</a></li>
+                </ul>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="hero" id="inicio">
-            <div class="hero-content">
-                <h1>Explora el Universo de la Programación</h1>
-                <p>Descubre los lenguajes más importantes, sus historias y su impacto en el mundo tecnológico</p>
-                <button class="cta-button" onclick="document.getElementById('lenguajes').scrollIntoView({behavior: 'smooth'})">
-                    Comenzar Exploración
-                </button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Explora el Mundo de la Programación</h1>
+            <p>Descubre los lenguajes de programación más populares, sus aplicaciones y cómo pueden impulsar tu carrera en tecnología.</p>
+            <div class="hero-buttons">
+                <a href="#languages" class="btn">Explorar Lenguajes</a>
+                <a href="#resources" class="btn btn-secondary">Recursos Gratuitos</a>
             </div>
-        </section>
-
-        <section class="search-section">
-            <div class="search-container">
-                <div class="search-box">
-                    <input type="text" class="search-input" placeholder="Buscar lenguajes de programación..." id="searchInput">
-                </div>
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-category="all">Todos</button>
-                    <button class="filter-btn" data-category="mainstream">Principales</button>
-                    <button class="filter-btn" data-category="web">Web</button>
-                    <button class="filter-btn" data-category="mobile">Móvil</button>
-                    <button class="filter-btn" data-category="systems">Sistemas</button>
-                    <button class="filter-btn" data-category="emerging">Emergentes</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="languages-section" id="lenguajes">
-            <div class="languages-grid" id="languagesGrid">
-                <!-- Las tarjetas se generarán dinámicamente con JavaScript -->
-            </div>
-        </section>
-    </main>
-
-    <!-- Modal para detalles -->
-    <div id="languageModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modalContent"></div>
         </div>
-    </div>
+    </section>
 
+    <!-- Languages Section -->
+    <section id="languages">
+        <div class="container">
+            <h2>Lenguajes de Programación Populares</h2>
+            <div class="languages-grid">
+                <!-- JavaScript -->
+                <div class="language-card">
+                    <div class="language-icon">JS</div>
+                    <div class="language-content">
+                        <h3>JavaScript</h3>
+                        <p>Lenguaje de scripting para desarrollo web, tanto frontend como backend con Node.js.</p>
+                        <div class="language-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="language-card">
+                    <div class="language-icon">PY</div>
+                    <div class="language-content">
+                        <h3>Python</h3>
+                        <p>Lenguaje versátil para ciencia de datos, IA, desarrollo web y automatización.</p>
+                        <div class="language-tags">
+                            <span class="tag">Data Science</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Web</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Java -->
+                <div class="language-card">
+                    <div class="language-icon">J</div>
+                    <div class="language-content">
+                        <h3>Java</h3>
+                        <p>Lenguaje de propósito general para aplicaciones empresariales y desarrollo Android.</p>
+                        <div class="language-tags">
+                            <span class="tag">Empresarial</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C++ -->
+                <div class="language-card">
+                    <div class="language-icon">C++</div>
+                    <div class="language-content">
+                        <h3>C++</h3>
+                        <p>Lenguaje de programación para sistemas, juegos y aplicaciones de alto rendimiento.</p>
+                        <div class="language-tags">
+                            <span class="tag">Sistemas</span>
+                            <span class="tag">Juegos</span>
+                            <span class="tag">Alto Rendimiento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swift -->
+                <div class="language-card">
+                    <div class="language-icon">SW</div>
+                    <div class="language-content">
+                        <h3>Swift</h3>
+                        <p>Lenguaje moderno para desarrollo de aplicaciones iOS y macOS.</p>
+                        <div class="language-tags">
+                            <span class="tag">iOS</span>
+                            <span class="tag">macOS</span>
+                            <span class="tag">Apple</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Go -->
+                <div class="language-card">
+                    <div class="language-icon">GO</div>
+                    <div class="language-content">
+                        <h3>Go</h3>
+                        <p>Lenguaje de Google para sistemas distribuidos y aplicaciones en la nube.</p>
+                        <div class="language-tags">
+                            <span class="tag">Cloud</span>
+                            <span class="tag">Concurrente</span>
+                            <span class="tag">Rendimiento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples Section -->
+    <section id="examples" class="code-examples">
+        <div class="container">
+            <h2>Ejemplos de Código</h2>
+            <div class="tabs">
+                <div class="tab active" data-language="python">Python</div>
+                <div class="tab" data-language="javascript">JavaScript</div>
+                <div class="tab" data-language="java">Java</div>
+                <div class="tab" data-language="cpp">C++</div>
+            </div>
+
+            <div class="code-container">
+                <div class="code-header">
+                    <div class="code-title">Hola Mundo</div>
+                    <div class="code-actions">
+                        <button class="btn btn-secondary" style="padding: 5px 10px; font-size: 0.8rem;">Copiar</button>
+                    </div>
+                </div>
+                <div class="code-body">
+                    <pre id="python-code"><code><span class="code-keyword">def</span> <span class="code-function">main</span>():
+    <span class="code-function">print</span>(<span class="code-string">"¡Hola, Mundo!"</span>)
+
+<span class="code-keyword">if</span> __name__ == <span class="code-string">"__main__"</span>:
+    main()</code></pre>
+                    
+                    <pre id="javascript-code" style="display: none;"><code><span class="code-keyword">function</span> <span class="code-function">saludar</span>() {
+    <span class="code-function">console</span>.<span class="code-function">log</span>(<span class="code-string">"¡Hola, Mundo!"</span>);
+}
+
+<span class="code-function">saludar</span>();</code></pre>
+                    
+                    <pre id="java-code" style="display: none;"><code><span class="code-keyword">public class</span> HolaMundo {
+    <span class="code-keyword">public static void</span> <span class="code-function">main</span>(String[] args) {
+        System.<span class="code-function">out</span>.<span class="code-function">println</span>(<span class="code-string">"¡Hola, Mundo!"</span>);
+    }
+}</code></pre>
+                    
+                    <pre id="cpp-code" style="display: none;"><code><span class="code-keyword">#include</span> <span class="code-string">&lt;iostream&gt;</span>
+
+<span class="code-keyword">using namespace</span> std;
+
+<span class="code-keyword">int</span> <span class="code-function">main</span>() {
+    cout << <span class="code-string">"¡Hola, Mundo!"</span> << endl;
+    <span class="code-keyword">return</span> 0;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <div class="container">
+            <h2>Recursos para Aprender</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>Tutoriales Interactivos</h3>
+                    <p>Aprende con ejercicios prácticos y proyectos reales.</p>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">Explorar</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h3>Videocursos</h3>
+                    <p>Clases en video impartidas por expertos en programación.</p>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">Ver Cursos</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">💻</div>
+                    <h3>Proyectos Prácticos</h3>
+                    <p>Implementa lo aprendido con proyectos del mundo real.</p>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">Comenzar</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">👥</div>
+                    <h3>Comunidad</h3>
+                    <p>Conecta con otros programadores y resuelve dudas.</p>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">Unirse</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 CodeVerse. Explorando el futuro de la programación.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CodeWorld</h3>
+                    <p>Tu portal para explorar el mundo de la programación y desarrollar tus habilidades.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#languages">Lenguajes</a></li>
+                        <li><a href="#examples">Ejemplos</a></li>
+                        <li><a href="#resources">Recursos</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@codeworld.com">info@codeworld.com</a></li>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 CodeWorld. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js"> </script>
 </body>
 </html>
